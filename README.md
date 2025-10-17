@@ -83,20 +83,28 @@ Go to 👉 [http://localhost:5173](http://localhost:5173)
 my-react-forumapp/
 │
 ├── src/
-│   ├── components/
-│   │   ├── Login.jsx
-│   │   ├── Register.jsx
-│   │   ├── ForumList.jsx
-│   │   ├── PostForm.jsx
-│   │   ├── Replies.jsx
-│   │   └── Header.jsx
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
+│   ├── lib/
+│   │   └── apiClient.js          # API service layer for all HTTP requests
+│   ├── ui/
+│   │   ├── AppHeader.jsx         # Navigation header with user info
+│   │   ├── CreatePost.jsx        # Form for creating new posts
+│   │   ├── ForumPost.jsx         # Individual post display component
+│   │   ├── PostsContainer.jsx    # Container for posts list
+│   │   └── CommentItem.jsx       # Individual comment display component
+│   ├── auth/
+│   │   └── UserContext.jsx       # Authentication context and state management
+│   ├── views/
+│   │   ├── DiscussionBoard.jsx   # Main forum page with posts
+│   │   ├── SignIn.jsx            # User login page
+│   │   └── SignUp.jsx            # User registration page
+│   ├── App.jsx                   # Main app component with routing
+│   ├── App.css                   # Custom animations and styling
+│   ├── main.jsx                  # App entry point with theme provider
+│   └── index.css                 # Global styles
 │
-├── package.json
-├── vite.config.js
-└── README.md
+├── package.json                  # Project dependencies and scripts
+├── vite.config.js               # Vite configuration
+└── index.html                   # HTML template
 ```
 
 ---
